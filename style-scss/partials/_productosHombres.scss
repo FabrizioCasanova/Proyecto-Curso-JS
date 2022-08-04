@@ -1,0 +1,64 @@
+.tituloProducto {
+    text-align: center;
+    font-family: $font-family;
+    font-style: italic;
+    font-size: x-large;
+    font-weight: 900;
+    border: double black;
+    margin: 0 34% 4% 34%;
+    padding: 1%;
+}
+
+.pijamas {
+    @extend .tituloProducto;
+    color: rgb(0, 0, 0);
+    margin: 4% 34%;
+}
+
+.fotosPijamas {
+    display: flex;
+    justify-content: space-around;
+
+    .piePijama {
+        padding: 1%;
+        margin: 4%;
+        text-align: center;
+        border-radius: 23px;
+    }
+}
+
+.medias {
+    text-align: center;
+    font-family: $font-family;
+    font-style: italic;
+    font-size: x-large;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    border: double rgb(0, 0, 0);
+    margin: 4% 34%;
+    padding: 1%;
+}
+
+.fotosMedias {
+    display: flex;
+    justify-content: space-around;
+
+    .pieMedias {
+        padding: 1%;
+        margin: 2%;
+        text-align: center;
+        border-radius: 23px;
+    }
+}
+
+figure {
+    figcaption {
+        @extend .medias;
+        font-size: large;
+        border: $bordeFigcaption;
+        border-radius: 24px;
+        margin: 3% 2%;
+        padding-bottom: 6px;
+        padding-top: 6px;
+    }
+}

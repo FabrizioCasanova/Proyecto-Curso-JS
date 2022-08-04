@@ -1,0 +1,24 @@
+$colorParrafoForm: (
+    Formulario: #f7e2e5a6,
+);
+
+@each $form,
+$colorFondo in $colorParrafoForm {
+    .parrafo#{$form} {
+        background-color: $colorFondo;
+    }
+}
+
+.parrafoFormulario {
+    text-align: center;
+    font-weight: 900;
+    font-size: 15px;
+    border: 4px double black;
+    margin: 7% 29% 2% 31%;
+}
+
+.numeroCelular {
+    padding-top: 1%;
+    font-weight: 900;
+    text-align: center;
+}

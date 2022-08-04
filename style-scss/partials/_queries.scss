@@ -1,0 +1,1662 @@
+/* Media para mobile*/
+@media (min-width: 320px) {
+    h1 {
+        font-size: 23px;
+        letter-spacing: 3px;
+    }
+
+    nav,
+    ul,
+    li {
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
+
+    .flechaDeslizadora {
+        margin-right: 9px;
+        margin-top: 11px;
+        margin-bottom: 26px;
+    }
+
+    .primerosParrafos {
+        margin: 8% 13% 9% 15%;
+    }
+
+    p {
+        font-size: small;
+    }
+
+    figure {
+        figcaption {
+            margin: 4% 9% 2% 16%;
+        }
+
+        img {
+            width: 256px;
+            height: 338px;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            margin-left: 12%;
+        }
+    }
+
+    .figcaptionPromos {
+        margin-left: 2%;
+        margin-right: 5%;
+        margin-top: 3%;
+        padding-bottom: 3px;
+        padding-top: 8px;
+    }
+
+    .w-50 {
+        width: 55%;
+        margin-top: 2%;
+        margin-left: 22%;
+        border: double 6px black;
+    }
+
+    /* Grilla 1 Del Index Mobile*/
+    .fotosEjemplos {
+        display: grid;
+        justify-content: center;
+        grid-template-areas:
+            "imagenIzquierda"
+            "imagenDerecha";
+        margin-top: 8%;
+
+        .imagenIzquierda {
+            grid-area: imagenIzquierda;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .imagenDerecha {
+            grid-area: imagenDerecha;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termmina la grilla 1 del Index Mobile */
+
+    .segundoParrafo {
+        margin: 5% 6% 8% 5%;
+        padding: 5%;
+    }
+
+    .textoDescuentos {
+        margin: 2% 15% 3% 16%
+    }
+
+    .textoDescuentos2 {
+        margin: 5% 12% 12% 13%;
+    }
+
+    /* Grilla 2 Del Index Mobile */
+    .fotosDescuentos1 {
+        display: grid;
+        justify-content: space-around;
+        grid-template-areas:
+            "foto1"
+            "foto2";
+        margin-left: 3%;
+
+        .descuento1 {
+            grid-area: foto1;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .descuento2 {
+            grid-area: foto2;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termmina la grilla 2 del Index Mobile */
+
+    figcaption {
+        input {
+            margin: 2%;
+        }
+    }
+
+    .bordeDescuentos {
+        height: 367px;
+        width: 264px;
+        margin-left: 11%;
+    }
+
+    /* Grilla 3 Del Index Mobile*/
+    .fotosDescuentos2 {
+        display: grid;
+        margin-right: 15%;
+        justify-content: center;
+        grid-template-areas:
+            "foto3"
+            "foto4"
+            "foto5"
+            "foto6";
+        margin-left: 5%;
+
+        .descuento3 {
+            grid-area: foto3;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .descuento4 {
+            grid-area: foto4;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .descuento5 {
+            grid-area: foto5;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .descuento6 {
+            grid-area: foto6;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termmina la grilla 3 del Index Mobile */
+
+    .figcaptionDescuentos {
+        margin: 5% 9% 5% 16%;
+        font-size: medium;
+        font-weight: 900;
+        padding: 4%;
+        flex-direction: column-reverse;
+    }
+
+    .botonDescuentos2 {
+        margin: 2% 0% 3% 3%;
+    }
+
+    /* Ropa Mujer Mobile */
+    .tituloProducto {
+        margin: 4% 5% 4% 6%;
+    }
+
+    /* Grilla 1 Mujer Mobile */
+    .fotosMujeres {
+        display: grid;
+        justify-content: space-around;
+        grid-template-areas:
+            "fotoMujer1"
+            "fotoMujer2"
+            "fotoMujer3"
+            "fotoMujer4"
+            "fotoMujer5"
+            "fotoMujer6";
+
+        .fotoMujer1 {
+            grid-area: fotoMujer1;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoMujer2 {
+            grid-area: fotoMujer2;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoMujer3 {
+            grid-area: fotoMujer3;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoMujer4 {
+            grid-area: fotoMujer4;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoMujer5 {
+            grid-area: fotoMujer5;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoMujer6 {
+            grid-area: fotoMujer6;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termmina la grilla 1 Mujer Mobile */
+
+    /* Grilla 2 Mujer Mobile */
+    .fotosPijamas {
+        display: grid;
+        grid-template-areas:
+            "fotoMujerPijama1"
+            "fotoMujerPijama2";
+
+        .fotoMujerPijama1 {
+            grid-area: fotoMujerPijama1;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoMujerPijama2 {
+            grid-area: fotoMujerPijama2;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termmina la grilla 2 Mujer Mobile */
+
+    /* Grilla 3 Mujer Mobile */
+    .fotosMedias {
+        display: grid;
+        grid-template-areas:
+            "fotoMujerMedia1"
+            "fotoMujerMedia2";
+
+        .fotoMujerMedia1 {
+            grid-area: fotoMujerMedia1;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoMujerMedia2 {
+            grid-area: fotoMujerMedia2;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termmina la grilla 3 Mujer Mobile */
+
+    .pijamas {
+        margin: 3% 6% 4% 7%;
+    }
+
+    .medias {
+        margin: 3% 6% 4% 7%;
+    }
+
+    footer {
+        margin-right: 10%;
+    }
+
+    /* Aca termina ropa Mujer Mobile */
+
+    /* Ropa Hombres Mobile */
+    /* Grilla 1 Hombres Mobile*/
+    .fotosHombres {
+        display: grid;
+        justify-content: space-around;
+        grid-template-areas:
+            "fotoHombre1"
+            "fotoHombre2"
+            "fotoHombre3"
+            "fotoHombre4";
+
+        .fotoHombre1 {
+            grid-area: fotoHombre1;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoHombre2 {
+            grid-area: fotoHombre2;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoHombre3 {
+            grid-area: fotoHombre3;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoHombre4 {
+            grid-area: fotoHombre4;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termmina la grilla 1 Hombre Mobile */
+
+    /* Grilla 2 Hombres Mobile */
+    .fotosPijamas {
+        display: grid;
+        grid-template-areas:
+            "fotoHombrePijama1"
+            "fotoHombrePijama2";
+
+        .fotoHombrePijama1 {
+            grid-area: fotoHombrePijama1;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoHombrePijama2 {
+            grid-area: fotoHombrePijama2;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termmina la grilla 2 Hombre Mobile */
+
+    /* Grilla 3 Hombres Mobile */
+    .fotosMedias {
+        display: grid;
+        grid-template-areas:
+            "fotoHombreMedia1"
+            "fotoHombreMedia2";
+
+        .fotoHombreMedia1 {
+            grid-area: fotoHombreMedia1;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoHombreMedia2 {
+            grid-area: fotoHombreMedia2;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termmina la grilla 3 Hombre Mobile */
+
+    /* Contacto Mobile */
+    .parrafoFormulario {
+        margin: 7% 11% 6% 11%;
+    }
+
+    .col-12 {
+        margin-left: 28%;
+    }
+
+    /* Aca termina contacto Mobile /*
+
+    /* Envios Mobile */
+    .parrafosEnvios {
+        margin: 9% 2% 0 2%;
+    }
+
+    .containerEnvios {
+        display: grid;
+        gap: 25px;
+    }
+
+    .alert-info,
+    .alerta {
+        background-color: rgb(239, 187, 195);
+        color: black;
+        font-family: $font-family;
+        text-align: center;
+        border: 2px double black;
+        font-weight: 900;
+        font-size: small;
+        margin: 7% 5% 7% 6%;
+        padding-bottom: 14px;
+
+        .alerta {
+            margin: 1% 10% 3% 10%;
+        }
+    }
+
+    @mixin mapas ($height, $width ) {
+        height: $height;
+        width: $width;
+    }
+
+    .mapaDinamico,
+    .mapaEstatico {
+        @include mapas (260px, 237px);
+    }
+
+    /* Aca termina envios Mobile /*
+
+    /* Footer Mobile */
+    .whatsapp {
+        display: inline-block;
+        padding-left: 19%;
+        width: 36%;
+    }
+
+    .facebook {
+        width: 17%;
+    }
+
+    .instagram {
+        width: 17%;
+    }
+
+    /* Aca termmina el footer Mobile */
+}
+
+/* Media para tablet */
+@media (min-width: 780px) {
+
+    nav,
+    ul,
+    li {
+        font-size: 18px;
+        flex-wrap: nowrap;
+    }
+
+    header {
+        font-family: serif;
+        text-align: center;
+        font-size: large;
+    }
+
+    h1 {
+        height: 113px;
+        letter-spacing: 25px;
+    }
+
+    p {
+        font-size: medium;
+        margin: 8px;
+    }
+
+    figure {
+        figcaption {
+            margin-left: -2%;
+            margin-right: 1%;
+            font-size: medium;
+        }
+
+        img {
+            width: 354px;
+            height: 484px;
+            margin-top: 6%;
+            margin-left: 0;
+        }
+    }
+
+    /* Grilla 1 Del Index Tablet*/
+    .fotosEjemplos {
+        display: grid;
+        grid-template-areas: "imagenIzquierda imagenDerecha";
+        justify-content: space-evenly;
+
+        .imagenIzquierda {
+            grid-area: imagenIzquierda;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .imagenDerecha {
+            grid-area: imagenDerecha;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termina grilla 1 Del Index Tablet*/
+
+    .segundoParrafo {
+        margin-top: 6%;
+    }
+
+    .textoDescuentos {
+        margin-top: 3%;
+        margin: 3% 20% 0% 20%;
+        padding: 8px;
+    }
+
+    .textoDescuentos2 {
+        padding: 8px;
+        margin: 4% 16% 5% 14%;
+
+    }
+
+    /* Grilla 2 Del Index Tablet*/
+    .fotosDescuentos1 {
+        display: grid;
+        grid-template-areas: "foto1 foto2";
+        justify-content: space-around;
+        margin-top: 3%;
+        margin-left: 7%;
+        margin-right: 5%;
+
+        .descuento1 {
+            grid-area: foto1;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .descuento2 {
+            grid-area: foto2;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termina grilla 2 Del Index Tablet*/
+
+    .figcaptionPromos {
+        font-size: medium;
+        margin-left: -1%;
+        margin-right: -1%;
+    }
+
+    figcaption {
+        input {
+            margin-left: 17px;
+            padding: 2px;
+            font-size: 15px;
+        }
+    }
+
+    .bordeDescuentos {
+        border: 6px double rgb(0, 0, 0);
+        width: 354px;
+        height: 484px;
+        margin-left: 3%;
+    }
+
+    /* Grilla 3 Del Index Tablet*/
+    .fotosDescuentos2 {
+        display: grid;
+        grid-template-areas:
+            "foto3 foto4"
+            "foto5 foto6";
+        justify-content: space-around;
+        padding-top: 2%;
+        margin-left: 7%;
+        margin-right: 6%;
+        gap: 3%;
+
+        .descuento3 {
+            grid-area: foto3;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            .descuento3:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .descuento4 {
+            grid-area: foto4;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            .descuento4:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .descuento5 {
+            grid-area: foto5;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .descuento6 {
+            grid-area: foto6;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termina grilla 3 Del Index Tablet*/
+
+    .figcaptionDescuentos {
+        font-size: medium;
+        font-weight: 900;
+        margin: 3% 1% 4% 11%;
+        padding: 4%;
+        flex-direction: column-reverse;
+    }
+
+    .botonDescuentos2 {
+        margin: 3% 0 3% 37%;
+    }
+
+    /* Ropa Mujer Tablet */
+    .tituloProducto {
+        font-size: x-large;
+        margin-left: 23%;
+        margin-right: 25%;
+        margin-bottom: 6%;
+        padding: 1%;
+    }
+
+    /* Grilla 1 Mujer Tablet */
+    .fotosMujeres {
+        display: grid;
+        justify-content: space-around;
+        grid-template-areas:
+            "fotoMujer1 fotoMujer2"
+            "fotoMujer3 fotoMujer4"
+            "fotoMujer5 fotoMujer6";
+
+        .fotoMujer1 {
+            grid-area: fotoMujer1;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoMujer2 {
+            grid-area: fotoMujer2;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoMujer3 {
+            grid-area: fotoMujer3;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+
+            .botonFotoMujeres1 {
+                margin-top: 1%;
+                margin-left: 2%;
+            }
+        }
+
+        .fotoMujer4 {
+            grid-area: fotoMujer4;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoMujer5 {
+            grid-area: fotoMujer5;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+
+            .botonFotoMujeres2 {
+                margin-top: 2%;
+                margin-left: 2%;
+            }
+        }
+
+        .fotoMujer6 {
+            grid-area: fotoMujer6;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termina grilla 1 Mujer Tablet */
+
+    .medias {
+        margin: 9% 19% 3% 19%;
+    }
+
+    .fotosMedias {
+        display: flex;
+        justify-content: space-around;
+
+        .botonFotoMedia1 {
+            margin-top: 2%;
+            margin-bottom: 1%;
+            margin-left: 2%;
+        }
+
+        .botonFotoMedia2 {
+            margin-top: 2%;
+            margin-bottom: 1%;
+            margin-left: 2%;
+        }
+    }
+
+    .pijamas {
+        margin: 9% 19% 3% 19%;
+
+        .piePijama {
+            padding: 2%;
+        }
+    }
+
+    .fotosPijamas {
+        display: flex;
+        justify-content: space-around;
+
+        .botonFotoPijama1 {
+            margin-top: 2%;
+            margin-left: 2%;
+        }
+
+        .botonFotoPijama2 {
+            margin-top: 2%;
+            margin-left: 2%;
+        }
+    }
+
+    /* Aca termina Ropa Mujer Tablet /*
+
+    /* Ropa Hombres Tablet */
+    .botonFotoHombre1 {
+        margin-left: 1%;
+    }
+
+    .botonFotoHombre2 {
+        margin-top: 2%;
+    }
+
+    /* Grilla 1 Hombres Tablet*/
+    .fotosHombres {
+        display: grid;
+        justify-content: space-around;
+        grid-template-areas:
+            "fotoHombre1 fotoHombre2"
+            "fotoHombre3 fotoHombre4";
+
+        .fotoHombre1 {
+            grid-area: fotoHombre1;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoHombre2 {
+            grid-area: fotoHombre2;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoHombre3 {
+            grid-area: fotoHombre3;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoHombre4 {
+            grid-area: fotoHombre4;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termina grilla 1 Hombres Tablet */
+
+    /* Contacto Tablet */
+    .parrafoFormulario {
+        margin: 7% 9% 4% 8%;
+    }
+
+    /* Aca termina Contacto Tablet */
+
+    /* Envios Tablet */
+    .parrafosEnvios {
+        margin: 8% 4% 5% 5%;
+    }
+
+    .containerEnvios {
+        display: grid;
+        grid-template-areas: "mapaDinamico mapaEstetico";
+        gap: 25px;
+
+        .mapaDinamico {
+            grid-area: mapaDinamico;
+        }
+
+        .mapaEstatico {
+            grid-area: mapaEstatico;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .alert-info,
+    .alerta {
+        background-color: rgb(239, 187, 195);
+        color: black;
+        font-family: $font-family;
+        text-align: center;
+        border: 2px double black;
+        font-weight: 900;
+        letter-spacing: 1px;
+        margin: 5% 30% 2% 30%;
+        padding-bottom: 14px;
+
+        .alerta {
+            margin: 1% 37% 3% 37%;
+        }
+    }
+
+    @mixin mapas ($height, $width ) {
+        height: $height;
+        width: $width;
+    }
+
+    .mapaDinamico,
+    .mapaEstatico {
+        @include mapas (350px, 350px);
+    }
+
+    /* Aca termina Envios Tablet */
+
+    /* Footer Tablet */
+
+    .whatsapp {
+        width: 40%;
+    }
+
+    .facebook {
+        width: 20%;
+    }
+
+    .instagram {
+        width: 20%;
+    }
+
+    /* Aca termina footer Tablet */
+}
+
+/* Media para Desktop*/
+@media (min-width: 1070px) {
+
+    nav,
+    ul,
+    li {
+        display: flex;
+        width: 99.9%;
+        justify-content: center;
+        font-size: 21px;
+        flex-wrap: nowrap;
+        align-items: center;
+        border: 1px solid rgb(0, 0, 0);
+    }
+
+    a {
+        text-decoration: none;
+
+        &:link {
+            color: #000000;
+        }
+
+        &:visited {
+            color: #000000;
+        }
+
+        &:active {
+            color: #000000;
+        }
+
+        &:hover {
+            color: #ffffff;
+        }
+    }
+
+    header {
+        font-family: serif;
+        text-align: center;
+        font-size: large;
+    }
+
+    h1 {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        color: rgb(0, 0, 0);
+        height: 85px;
+        font-family: serif;
+        background-color: #FAACA8;
+        letter-spacing: 50px;
+    }
+
+    .primerosParrafos {
+        margin-top: 18px;
+        text-align: center;
+        border: double rgb(0, 0, 0);
+        font-weight: 900;
+        margin-bottom: 25px;
+        margin-left: 15%;
+        margin-right: 15%;
+        color: black;
+    }
+
+    .segundoParrafo {
+        text-align: center;
+        border: double rgb(0, 0, 0);
+        font-weight: 900;
+        margin: 2% 15% 5% 15%;
+        padding: 1%;
+        color: rgb(0, 0, 0);
+    }
+
+    p {
+        font-family: $font-family;
+        font-size: large;
+        margin: 10px;
+    }
+
+    section {
+        figure {
+            margin: 10px;
+
+            figcaption {
+                font-family: $font-family;
+                font-size: large;
+                border: $bordeFigcaption;
+                color: rgb(0, 0, 0);
+                font-weight: 900;
+                text-align: center;
+                border-radius: 24px;
+                margin: 3% 2%;
+                padding-bottom: 6px;
+                padding-top: 6px;
+
+                input {
+                    transition-duration: 0.4s;
+                    background-color: #00000000;
+                    cursor: pointer;
+                    font-weight: 900;
+                    border: 1px solid black;
+                    box-shadow: 0px 0px 0px 1px;
+                    margin: 0 0 0 17px;
+                    margin-left: 17px;
+                    padding: 2px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    color: rgb(0, 0, 0);
+
+                    &:hover {
+                        border: 1px solid rgb(255, 217, 0);
+                        background-color: #000000;
+                        color: white;
+                    }
+                }
+            }
+
+            img {
+                border: 6px double rgb(0, 0, 0);
+                width: 469px;
+                height: 625px;
+                margin-left: 0;
+            }
+        }
+    }
+
+    li {
+        img {
+            padding: 5px;
+        }
+    }
+
+    .flechaDeslizadora {
+        display: flex;
+        justify-content: right;
+        margin-right: 10px;
+        padding-top: 22px;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .tituloProducto {
+        text-align: center;
+        font-family: $font-family;
+        font-style: italic;
+        font-size: x-large;
+        font-weight: 900;
+        border: double black;
+        margin: 0 34% 4% 34%;
+        padding: 1%;
+    }
+
+    .figcaptionPromos {
+        font-family: $font-family;
+        font-size: large;
+        text-align: center;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 2%;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    .textoDescuentos,
+    .textoDescuentos2 {
+        font-family: $font-family;
+        margin-top: 2%;
+        font-style: italic;
+        text-align: center;
+        padding: 6px;
+        font-weight: 900;
+        margin-left: 26%;
+        margin-right: 27%;
+        color: rgb(0, 0, 0);
+        border: 2px dotted rgb(0, 0, 0);
+    }
+
+    .figcaptionDescuentos {
+        display: flex;
+        font-family: $font-family;
+        font-size: large;
+        color: rgb(0, 0, 0);
+        border: $bordeFigcaption;
+        font-weight: 900;
+        border-radius: 20px;
+        margin: 5% 0% 5% 18%;
+        padding: 4%;
+        padding-bottom: 6px;
+        padding-top: 5px;
+        justify-content: space-around;
+        flex-direction: column-reverse;
+
+        .tachado {
+            display: flex;
+            text-decoration: line-through;
+            color: rgb(135, 13, 13);
+        }
+    }
+
+    .bordeDescuentos {
+        border: 6px double rgb(0, 0, 0);
+        width: 469px;
+        height: 625px;
+        margin-left: 9%;
+    }
+
+    .botonDescuentos2 {
+        margin: 3% 0% 3% 38%;
+    }
+
+    .botonFotoMujeres,
+    .botonFotoMujeres2 {
+        margin: 0 0 0 17px;
+    }
+
+    /* Grilla 1 Del Index Desktop*/
+    .fotosEjemplos {
+        display: grid;
+        grid-template-areas: "imagenIzquierda imagenDerecha";
+        justify-content: space-around;
+        gap: 4%;
+
+        .imagenIzquierda {
+            grid-area: imagenIzquierda;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .imagenDerecha {
+            grid-area: imagenDerecha;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termmina Grilla 1 Del Index Desktop */
+
+    /* Grilla 2 Del Index Desktop*/
+    .fotosDescuentos1 {
+        display: grid;
+        grid-template-areas: "foto1 foto2";
+        justify-content: space-around;
+        padding: 0%;
+        margin-left: 0;
+        margin-right: 0;
+        gap: 2%;
+
+        .descuento1 {
+            grid-area: foto1;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .descuento2 {
+            grid-area: foto2;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termmina Grilla 2 Del Index Desktop */
+
+    /* Grilla 3 Del Index Desktop*/
+    .fotosDescuentos2 {
+        display: grid;
+        grid-template-areas:
+            "foto3 foto4"
+            "foto5 foto6";
+        justify-content: space-around;
+        padding-top: 3%;
+        margin-left: -2%;
+        margin-right: 1%;
+        gap: 3%;
+
+        .descuento3 {
+            grid-area: foto3;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .descuento4 {
+            grid-area: foto4;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .descuento5 {
+            grid-area: foto5;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .descuento6 {
+            grid-area: foto6;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termmina Grilla 3 Del Index Desktop */
+
+    /* Grilla 1 Mujeres Desktop */
+    .fotosMujeres {
+        display: grid;
+        justify-content: space-around;
+        grid-template-areas:
+            "fotoMujer1 fotoMujer2"
+            "fotoMujer3 fotoMujer4"
+            "fotoMujer5 fotoMujer6";
+
+        .fotoMujer1 {
+            grid-area: fotoMujer1;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoMujer2 {
+            grid-area: fotoMujer2;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoMujer3 {
+            grid-area: fotoMujer3;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoMujer4 {
+            grid-area: fotoMujer4;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoMujer5 {
+            grid-area: fotoMujer5;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoMujer6 {
+            grid-area: fotoMujer6;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termmina Grilla 1 Mujer Desktop */
+
+    /* Grilla 1 Hombres Desktop*/
+    .fotosHombres {
+        display: grid;
+        justify-content: space-around;
+        grid-template-areas:
+            "fotoHombre1 fotoHombre2"
+            "fotoHombre3 fotoHombre4";
+
+        .fotoHombre1 {
+            grid-area: fotoHombre1;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoHombre2 {
+            grid-area: fotoHombre2;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoHombre3 {
+            grid-area: fotoHombre3;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .fotoHombre4 {
+            grid-area: fotoHombre4;
+            transition-property: all;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Aca termmina Grilla 1 Hombres Desktop */
+
+    .pijamas {
+        text-align: center;
+        font-family: $font-family;
+        font-style: italic;
+        font-size: x-large;
+        font-weight: 900;
+        color: rgb(0, 0, 0);
+        border: double rgb(0, 0, 0);
+        margin: 4% 34%;
+        padding: 1%;
+    }
+
+    .fotosPijamas {
+        display: flex;
+        justify-content: space-around;
+
+        .piePijama {
+            padding: 1%;
+            margin: 4%;
+            text-align: center;
+            border-radius: 23px;
+        }
+    }
+
+    .medias {
+        text-align: center;
+        font-family: $font-family;
+        font-style: italic;
+        font-size: x-large;
+        font-weight: 900;
+        color: rgb(0, 0, 0);
+        border: double rgb(0, 0, 0);
+        margin: 4% 34%;
+        padding: 1%;
+    }
+
+    .fotosMedias {
+        display: flex;
+        justify-content: space-around;
+
+        .pieMedias {
+            padding: 1%;
+            margin: 2%;
+            text-align: center;
+            border-radius: 23px;
+        }
+    }
+
+    .botonFotoPijama1 {
+        margin-top: 0;
+        margin-left: 2%;
+    }
+
+    .botonFotoPijama2 {
+        margin-top: 0;
+        margin-left: 2%;
+    }
+
+    .botonFotoHombre2 {
+        margin: 1%;
+    }
+
+    /* Contacto Desktop */
+    .numeroCelular {
+        padding-top: 1%;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .parrafoFormulario {
+        margin: 4% 30% 5% 30%;
+    }
+
+    .col-12 {
+        margin-left: 39%;
+    }
+
+    /* Aca termina Contacto Desktop */
+
+    /* Envios Desktop */
+    .containerEnvios {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 45px;
+    }
+
+    .alert-info,
+    .alerta {
+        background-color: rgb(239, 187, 195);
+        color: black;
+        font-family: $font-family;
+        text-align: center;
+        border: 2px double black;
+        font-weight: 900;
+        letter-spacing: 1px;
+        margin: 5% 30% 2% 30%;
+        padding-bottom: 14px;
+
+        .alerta {
+            margin: 1% 37% 3% 37%;
+        }
+    }
+
+    @mixin mapas ($height, $width ) {
+        height: $height;
+        width: $width;
+    }
+
+    .mapaDinamico,
+    .mapaEstatico {
+        @include mapas (450px, 500px);
+    }
+
+    .mapaEstatico {
+        margin: 0 0 24% 1%;
+        padding-top: 0px;
+        border: none;
+    }
+
+    /* Aca termina Envios Desktop */
+
+    /* Grilla footer Desktop*/
+    .footer {
+        display: grid;
+        grid-template-areas:
+            "whatsapp instagram twitter facebook";
+        justify-content: space-around;
+        padding-top: 1%;
+
+        .whatsapp {
+            grid-area: whatsapp;
+        }
+
+        .instagram {
+            grid-area: instagram;
+        }
+
+        .facebook {
+            grid-area: facebook;
+        }
+
+        .twitter {
+            grid-area: twitter;
+        }
+    }
+
+    /* Aca termmina grilla footer Desktop */
+
+    /* Footer */
+
+    .whatsapp {
+        display: inline-block;
+        padding-left: 19%;
+        width: 40%;
+    }
+
+    .instagram {
+        display: inline-block;
+        width: 20%;
+    }
+
+    .facebook {
+        display: inline-block;
+        width: 20%;
+    }
+
+    .twitter {
+        display: inline-block;
+    }
+
+    /* Aca termina footer */
+}
