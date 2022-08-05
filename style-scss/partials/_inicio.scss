@@ -9,9 +9,25 @@
     color: black;
 }
 
-.card{
-    margin: 5px;
+.card {
+    margin: 5% 4% 3% 4%;
+    border: #EFBCC5 3px dotted;
+    padding: 19px;
+    color: #EFBCC5;
+    background-color: black;
+}
 
+.btn-dark {
+    margin-top: 14px;
+    --bs-btn-color: #EFBCC5;
+    --bs-btn-hover-color: #EFBCC5;
+    --bs-btn-border-color: #EFBCC5;
+    --bs-btn-hover-border-color: #EFBCC5;
+    --bs-btn-active-color: #EFBCC5;
+}
+
+.row {
+    justify-content: center;
 }
 
 figure {
