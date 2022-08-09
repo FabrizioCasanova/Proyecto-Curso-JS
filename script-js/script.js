@@ -35,7 +35,7 @@ productosArray.forEach(producto => {
       <p class="card-text">Talle: ${producto.talle} </p>
       <p class="card-text">Stock: ${producto.stock} </p>
       <p class="card-text">Precio: $${producto.precio} </p>
-      <button	class="btn btn-dark" type="submit">Comprar Producto</button>
+      <button class="btn btn-dark" type="submit">Comprar Producto</button>
     </div>
   </div>
   `
@@ -68,3 +68,16 @@ productosArray.forEach(producto => {
   }
   contador = contador + 1
 });
+
+const boton = document.querySelectorAll(".btn-dark");
+
+for(let i = 0; i<boton.length; i++){
+  boton[i].addEventListener('click', () =>{
+ console.log("Diste click exitosamente")
+})}
+
+
+
+
+
+ 
