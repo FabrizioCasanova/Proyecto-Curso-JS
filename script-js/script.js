@@ -25,59 +25,45 @@ const productosHtml = document.getElementById("productosHtml")
 const productosHtml2 = document.getElementById("productosHtml2")
 const productosHtml3 = document.getElementById("productosHtml3")
 
+
 productosArray.forEach(producto => {
   if (contador == 1 || contador == 2) {
-    productosHtml.innerHTML += `
+    cardsDom("productosHtml", producto)
+
+  } else if (contador == 3 || contador == 4) {
+    cardsDom("productosHtml2", producto)
+
+  } else {
+    cardsDom("productosHtml3", producto)
+  }
+
+  contador = contador + 1
+});
+
+function cardsDom(divHtml, product) {
+  const div = document.getElementById(divHtml)
+  div.innerHTML += `
   <div class="card" style="width: 18rem;">
-    <img src= ${producto.imagen} class="card-img-top" alt="...">
+    <img src= ${product.imagen} class="card-img-top" alt="...">
     <div class="card-body">
-      <p class="card-text">Nombre: ${producto.nombre} </p>
-      <p class="card-text">Talle: ${producto.talle} </p>
-      <p class="card-text">Stock: ${producto.stock} </p>
-      <p class="card-text">Precio: $${producto.precio} </p>
+      <p class="card-text">Nombre: ${product.nombre} </p>
+      <p class="card-text">Talle: ${product.talle} </p>
+      <p class="card-text">Stock: ${product.stock} </p>
+      <p class="card-text">Precio: $${product.precio} </p>
       <button class="btn btn-dark" type="submit">Comprar Producto</button>
     </div>
   </div>
   `
-  } else if (contador == 3 || contador == 4) {
-    productosHtml2.innerHTML += `
-  <div class="card" style="width: 18rem;">
-    <img src= ${producto.imagen} class="card-img-top" alt="...">
-    <div class="card-body">
-      <p class="card-text">Nombre: ${producto.nombre} </p>
-      <p class="card-text">Talle: ${producto.talle} </p>
-      <p class="card-text">Stock: ${producto.stock} </p>
-      <p class="card-text">Precio: $${producto.precio} </p>
-      <button	class="btn btn-dark" type="submit">Comprar Producto</button>
-    </div>
-  </div>
-  `
-  } else {
-    productosHtml3.innerHTML += `
-  <div class="card" style="width: 18rem;">
-    <img src= ${producto.imagen} class="card-img-top" alt="...">
-    <div class="card-body">
-      <p class="card-text">Nombre: ${producto.nombre} </p>
-      <p class="card-text">Talle: ${producto.talle} </p>
-      <p class="card-text">Stock: ${producto.stock} </p>
-      <p class="card-text">Precio: $${producto.precio} </p>
-      <button	class="btn btn-dark" type="submit">Comprar Producto</button>
-    </div>
-  </div>
-  `
-  }
-  contador = contador + 1
-});
+}
 
 const boton = document.querySelectorAll(".btn-dark");
 
-for(let i = 0; i<boton.length; i++){
-  boton[i].addEventListener('click', () =>{
- console.log("Diste click exitosamente")
-})}
-
-
-
-
-
- 
+for (let i = 0; i < boton.length; i++) {
+  boton[i].addEventListener('click', () => {
+    Swal.fire(
+      '¡Listo!',
+      '¡El producto se encuentra en el carrito! ',
+      'success',
+    )
+  })
+}

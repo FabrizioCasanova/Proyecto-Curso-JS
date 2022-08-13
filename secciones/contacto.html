@@ -58,23 +58,23 @@
 		<p>Rellene este formulario para poder adquirir productos:</p>
 	</div>
 
-	<form class="row g-3">
+	<form id="form" class="row g-3">
 		<div class="col-md-4">
 			<label for="validationServer01" class="form-label">Nombre</label>
-			<input type="text" class="form-control" id="validationServer01"
+			<input type="text" class="form-control" name="nombre" id="validationServer01"
 				aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
 		</div>
 
 		<div class="col-md-4">
 			<label for="validationServer02" class="form-label">Apellido</label>
-			<input type="text" class="form-control" id="validationServer02"
+			<input type="text" class="form-control" name="apellido" id="validationServer02"
 				aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
 		</div>
 
 		<div class="col-md-4">
 			<label for="validationServerUsername" class="form-label">Dirección</label>
 			<div class="input-group has-validation">
-				<input type="text" class="form-control" id="validationServerUsername"
+				<input type="text" class="form-control" name="direccion" id="validationServerUsername"
 					aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
 				<div id="validationServerUsernameFeedback" class="invalid-feedback">
 				</div>
@@ -83,7 +83,7 @@
 
 		<div class="col-md-6">
 			<label for="validationServer03" class="form-label">Ciudad</label>
-			<input type="text" class="form-control" id="validationServer03"
+			<input type="text" class="form-control" name="ciudad" id="validationServer03"
 				aria-describedby="validationServer03Feedback" required>
 			<div id="validationServer03Feedback" class="invalid-feedback">
 			</div>
@@ -91,7 +91,7 @@
 
 		<div class="col-md-3">
 			<label for="validationServer04" class="form-label">Provincia</label>
-			<input class="form-control" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+			<input class="form-control" name="provincia" id="validationServer04" aria-describedby="validationServer04Feedback" required>
 
 			<div id="validationServer04Feedback" class="invalid-feedback">
 			</div>
@@ -99,7 +99,7 @@
 
 		<div class="col-md-3">
 			<label for="validationServer05" class="form-label">Codigo postal</label>
-			<input type="text" class="form-control" id="validationServer05"
+			<input type="text" class="form-control" name="codigoPostal" id="validationServer05"
 				aria-describedby="validationServer05Feedback" required>
 			<div id="validationServer05Feedback" class="invalid-feedback">
 			</div>
@@ -152,6 +152,8 @@
 			</div>
 		</section>
 	</footer>
+
+	<script src="../script-js/contacto.js"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
 		integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
