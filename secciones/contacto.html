@@ -91,7 +91,8 @@
 
 		<div class="col-md-3">
 			<label for="validationServer04" class="form-label">Provincia</label>
-			<input class="form-control" name="provincia" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+			<input class="form-control" name="provincia" id="validationServer04"
+				aria-describedby="validationServer04Feedback" required>
 
 			<div id="validationServer04Feedback" class="invalid-feedback">
 			</div>
@@ -111,7 +112,7 @@
 					aria-describedby="invalidCheck3Feedback" required>
 				<label class="form-check-label" for="invalidCheck3">
 					Acepto los <a href="#" class="link-primary">Terminos y condiciones</a> <button
-						class="btn btn-primary" type="submit">Enviar formulario</button>
+						class="btn btn-primary" id="botonForm" type="submit">Enviar formulario</button>
 				</label>
 			</div>
 		</div>
@@ -152,6 +153,8 @@
 			</div>
 		</section>
 	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.26/dist/sweetalert2.all.min.js"></script>
 
 	<script src="../script-js/contacto.js"></script>
 
