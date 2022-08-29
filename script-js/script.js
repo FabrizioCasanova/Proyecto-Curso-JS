@@ -1,4 +1,4 @@
-class Producto {
+/*class Producto {
   constructor(nombre, talle, stock, precio, imagen) {
     this.nombre = nombre
     this.talle = talle
@@ -18,15 +18,20 @@ const producto7 = new Producto("Conjunto de Andressa ART.669", 100, "Quedan 10",
 const producto8 = new Producto("Conjunto de Andressa ART.1080", 105, "Quedan 22", 1400, "./img/conjuntoAndressa-1080.webp")
 
 const productosArray = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8]
-
-let contador = 1
+*/
 
 const productosHtml = document.getElementById("productosHtml")
 const productosHtml2 = document.getElementById("productosHtml2")
 const productosHtml3 = document.getElementById("productosHtml3")
 
+let contador = 1
+
+fetch('./json/productos.json')
+.then(response => response.json() )
+.then(productosArray => {
 
 productosArray.forEach(producto => {
+
   if (contador == 1 || contador == 2) {
     cardsDom("productosHtml", producto)
 
@@ -39,11 +44,14 @@ productosArray.forEach(producto => {
 
   contador = contador + 1
 });
+})
+
+// Funcion para optimizar el pitado de Dom en 3 divs distintos //
 
 function cardsDom(divHtml, product) {
   const div = document.getElementById(divHtml)
   div.innerHTML += `
-  <div class="card" style="width: 18rem;">
+  <div class="card"  style="width: 18rem;">
     <img src= ${product.imagen} class="card-img-top" alt="...">
     <div class="card-body">
       <p class="card-text">Nombre: ${product.nombre} </p>
@@ -54,16 +62,4 @@ function cardsDom(divHtml, product) {
     </div>
   </div>
   `
-}
-
-const boton = document.querySelectorAll(".btn-dark");
-
-for (let i = 0; i < boton.length; i++) {
-  boton[i].addEventListener('click', () => {
-    Swal.fire(
-      '¡Listo!',
-      '¡El producto se encuentra en el carrito! ',
-      'success',
-    )
-  })
 }

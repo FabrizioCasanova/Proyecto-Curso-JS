@@ -1,0 +1,67 @@
+[
+
+    {
+        "nombre": "Conjunto Sexy Lali",
+        "talle" : 90,
+        "stock" : "Quedan 30",
+        "precio": 2100,
+        "imagen": "./img/sexyLali.webp"
+    },
+
+    {
+        "nombre": "Conjunto Xy ART.1303",
+        "talle" : "M",
+        "stock" : "Quedan 24",
+        "precio": 1050,
+        "imagen": "./img/xy-1303.webp"
+    },
+
+    {
+        "nombre": "Pack de bombacha ART.30211",
+        "talle" : 95,
+        "stock" : "Quedan 20",
+        "precio": 890,
+        "imagen": "./img/packBombacha1.webp"  
+    },  
+
+    {
+        "nombre": "Pack de bombacha ART.30213",
+        "talle" : 80,
+        "stock" : "Quedan 26",
+        "precio": 800,
+        "imagen": "./img/packBombacha2.webp"
+    },
+
+    {
+        "nombre": "Conjunto de Andressa ART.922",
+        "talle" : 85,
+        "stock" : "Quedan 15",
+        "precio": 1450,
+        "imagen": "./img/conjuntoAndressa-922.webp"
+    },
+
+    {
+        "nombre": "Boxer Dufour ART.11812",
+        "talle" : "L",
+        "stock" : "Quedan 12",
+        "precio": 850,
+        "imagen": "./img/conjuntoAndressa-11812.webp"
+    },
+
+    {
+        "nombre": "Conjunto de Andressa ART.669",
+        "talle" : 100,
+        "stock" : "Quedan 10",
+        "precio": 1150,
+        "imagen": "./img/conjuntoAndressa-669.webp"
+    },
+
+    {
+        "nombre": "Conjunto de Andressa ART.1080",
+        "talle" : 105,
+        "stock" : "Quedan 22",
+        "precio": 1400,
+        "imagen": "./img/conjuntoAndressa-1080.webp"
+    }
+
+]
