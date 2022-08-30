@@ -20,38 +20,13 @@ const producto8 = new Producto("Conjunto de Andressa ART.1080", 105, "Quedan 22"
 const productosArray = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8]
 */
 
-const productosHtml = document.getElementById("productosHtml")
-const productosHtml2 = document.getElementById("productosHtml2")
-const productosHtml3 = document.getElementById("productosHtml3")
 
-let contador = 1
-
-fetch('./json/productos.json')
-.then(response => response.json() )
-.then(productosArray => {
-
-productosArray.forEach(producto => {
-
-  if (contador == 1 || contador == 2) {
-    cardsDom("productosHtml", producto)
-
-  } else if (contador == 3 || contador == 4) {
-    cardsDom("productosHtml2", producto)
-
-  } else {
-    cardsDom("productosHtml3", producto)
-  }
-
-  contador = contador + 1
-});
-})
-
-// Funcion para optimizar el pitado de Dom en 3 divs distintos //
+// Funcion para optimizar el pintado de Dom en 3 divs distintos //
 
 function cardsDom(divHtml, product) {
   const div = document.getElementById(divHtml)
   div.innerHTML += `
-  <div class="card"  style="width: 18rem;">
+  <div class="card" id= "${product.id}" style="width: 18rem;">
     <img src= ${product.imagen} class="card-img-top" alt="...">
     <div class="card-body">
       <p class="card-text">Nombre: ${product.nombre} </p>
@@ -63,3 +38,66 @@ function cardsDom(divHtml, product) {
   </div>
   `
 }
+
+const productosHtml = document.getElementById("productosHtml")
+const productosHtml2 = document.getElementById("productosHtml2")
+const productosHtml3 = document.getElementById("productosHtml3")
+const carritoProductos = JSON.parse(localStorage.getItem('carrito')) ?? []
+
+fetch('./json/productos.json')
+  .then(response => response.json())
+  .then(productosArray => {
+
+    productosArray.forEach((producto, indice) => {
+
+      if (indice == 0 || indice == 1) {
+        cardsDom("productosHtml", producto)
+
+      } else if (indice == 2 || indice == 3) {
+        cardsDom("productosHtml2", producto)
+
+      } else {
+        cardsDom("productosHtml3", producto)
+      }
+
+
+    });
+
+    productosArray.forEach((producto) => {
+
+      const cardProd = document.getElementById(`${producto.id}`)
+      cardProd.children[1].children[4].addEventListener('click', () => {
+        
+        Swal.fire(
+          '¡Listo!',
+          '¡Tu producto fue agregado al carrtio con exito! ',
+          'success',
+        )
+
+        if(carritoProductos.find(product => product.id == producto.id)) {
+          let indiceCarrito = carritoProductos.findIndex((product => product.id == producto.id))
+          if(carritoProductos[indiceCarrito].cantidad < producto.stock) {
+            carritoProductos[indiceCarrito].cantidad++
+          }
+        } else{
+          const crearProducto = {id: producto.id, cantidad: 1}
+          carritoProductos.push(crearProducto) 
+        }
+
+        localStorage.setItem('carrito', JSON.stringify (carritoProductos))
+
+      })
+    })
+  })
+
+  let prueba = []
+  let ultimasComprasStorage = []
+
+  if(localStorage.getItem('carrito')) {
+    ultimasComprasStorage = JSON.parse(localStorage.getItem('carrito'))
+    ultimasComprasStorage.forEach((compra) =>{
+      prueba.push(compra)
+      console.log(`${prueba.nombre}`)
+        
+    })
+  }
