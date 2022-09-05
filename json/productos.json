@@ -6,7 +6,7 @@
         "talle" : 90,
         "stock" : 30 ,
         "precio": 2100,
-        "imagen": "./img/sexyLali.webp"
+        "imagen": "../img/sexyLali.webp"
     },
 
     {
