@@ -86,6 +86,12 @@ li img {
   padding: 5px;
 }
 
+.carrito {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
 .flechaDeslizadora {
   display: flex;
   justify-content: right;
@@ -199,7 +205,35 @@ a:hover {
   border: #EFBCC5 3px dotted;
   padding: 19px;
   color: #EFBCC5;
-  background-color: black;
+  background: linear-gradient(to top, #000000, #434343);
+}
+
+.card:hover {
+  transform: scale(1.02);
+  transition-duration: 0.5s;
+}
+
+svg {
+  vertical-align: baseline
+}
+
+.bg-primary {
+  background-color: #F8AFAD !important;
+}
+
+.btn-info {
+  font-size: 17px;
+  --bs-btn-focus-shadow-rgb: black;
+  --bs-btn-active-bg: black;
+  --bs-btn-active-border-color: black;
+  --bs-btn-bg: #212529;
+  --bs-btn-color: #EFBCC5;
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-border-color: #EFBCC5;
+  --bs-btn-hover-border-color: #EFBCC5;
+  --bs-btn-active-color: #EFBCC5;
+  --bs-btn-hover-bg: black;
+  box-shadow: 0px 1px 9px 0px;
 }
 
 .btn-dark {
@@ -209,6 +243,8 @@ a:hover {
   --bs-btn-border-color: #EFBCC5;
   --bs-btn-hover-border-color: #EFBCC5;
   --bs-btn-active-color: #EFBCC5;
+  --bs-btn-hover-bg: black;
+  box-shadow: 0px 1px 9px 0px;
 }
 
 .row {

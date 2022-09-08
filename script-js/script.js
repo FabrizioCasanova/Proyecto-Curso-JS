@@ -1,5 +1,6 @@
-// Funcion para optimizar el pintado de Dom en 3 divs distintos //
+"use strict"
 
+// Funcion para optimizar el pintado de Dom en 3 divs distintos //
 function cardsDom(divHtml, product) {
   const div = document.getElementById(divHtml)
   div.innerHTML += `
@@ -16,25 +17,67 @@ function cardsDom(divHtml, product) {
   `
 }
 
-// Funcion asincronica
+const numCarrito = document.getElementById('cantidadCarrito')
+const productosHtml = document.getElementById("productosHtml")
+const productosHtml2 = document.getElementById("productosHtml2")
+const productosHtml3 = document.getElementById("productosHtml3")
+const pintarCarrito = document.getElementById("pintarCarrito")
 
-async function consultaAsync() {
-  const datosFetch = await fetch('./json/productos.json')
-  const productosJson = await datosFetch.json()
-  return productosJson
-}
+// Consulto mi LocalStorage o creo un array vacio dependiendo de si existe o no //
+
+let storageCarrito = JSON.parse(localStorage.getItem('carrito')) ?? []
 
 function aplicarNumeroCarrito(cantidad) {
-  const numCarrito = document.getElementById('cantidadCarrito')
   numCarrito.innerHTML = `
   <span class= "badge bg-primary rounded-pill"> ${cantidad} </span>
   `
 }
 
-const productosHtml = document.getElementById("productosHtml")
-const productosHtml2 = document.getElementById("productosHtml2")
-const productosHtml3 = document.getElementById("productosHtml3")
-const storageCarrito = JSON.parse(localStorage.getItem('carrito')) ?? []
+// Pintada de Dom para mi carrito al actualizarse la pagina //
+
+let contador = 0
+
+let arrayCarritoStorage
+
+if (localStorage.getItem('carrito')) {
+
+  arrayCarritoStorage = JSON.parse(localStorage.getItem('carrito'))
+
+  arrayCarritoStorage.forEach((compra) => {
+    contador += compra.cantidad
+  })
+
+  aplicarNumeroCarrito(contador)
+
+  arrayCarritoStorage.forEach((compra) => {
+
+    pintarCarrito.innerHTML +=
+      `
+    <table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Talle</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">${compra.nombre}</th>
+      <td>${compra.talle}</td>
+      <td>${compra.cantidad}</td>
+      <td>$${compra.precio}</td>
+    </tr>
+  </tbody>
+</table>
+    `
+  })
+}
+
+let ultimasComprasStorage = []
+
+// Fetch que llama a mi array de objetos guardados en mi JSON //
 
 fetch('./json/productos.json')
   .then(response => response.json())
@@ -55,53 +98,65 @@ fetch('./json/productos.json')
 
     });
 
-    class Producto {
-      constructor(nombre, talle, stock, precio, imagen) {
-        this.nombre = nombre
-        this.talle = talle
-        this.stock = stock
-        this.precio = precio
-        this.imagen = imagen
-      }
-    }
-
-    let ultimasComprasStorage = []
     productosArray.forEach((producto) => {
 
       const cardProd = document.getElementById(`${producto.id}`)
       cardProd.children[1].children[4].addEventListener('click', () => {
 
-        const pintarCarrito = document.getElementById("pintarCarrito")
+        // Pintada del Dom de mi carrito sin actualizar la pagina //
 
-        const product = new Producto(producto.nombre, producto.talle, producto.stock, producto.precio, producto.imagen)
-        ultimasComprasStorage.push(product)
-        aplicarNumeroCarrito(ultimasComprasStorage.length)
-        
-        // 1. Pintada del Dom de mi carrito sin actualizar la pagina
-        pintarCarrito.innerHTML += ` 
-          <div class="card border-primary mb-3" style="max-width: 20rem;">
-          <div class="card-header"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">${product.nombre}</font></font></div>
-          <div class="card-body">
-            <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Cantidad: ${product.cant}</font></font></p>
-            <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Talle: ${product.talle}</font></font></p>
-            <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Stock: ${product.stock}</font></font></p>
-            <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Precio: $${product.precio}</font></font></p>
-          </div>
-        </div>  
+        if (ultimasComprasStorage.some(product => product.id == producto.id) == false) {
+          pintarCarrito.innerHTML +=
+            `
+        <table id="id-producto-carrito-${producto.id}" class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Talle</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">${producto.nombre}</th>
+            <td>${producto.talle}</td>
+            <td> Cantidad: 1</td>
+            <td>$${producto.precio}</td>
+          </tr>
+        </tbody>
+      </table>
           `
+        } else {
+          const ProductoCarrito = document.getElementById(`id-producto-carrito-${producto.id}`)
+          const parrafoProductoCarrito = ProductoCarrito.children[1].children[0].children[2]
+          if (producto.cantidad == undefined) {
+            producto.cantidad = 2
+          } else {
+            producto.cantidad++
+          }
+          parrafoProductoCarrito.innerHTML = `Cantidad: ${producto.cantidad}`
+        }
+
+        ultimasComprasStorage.push(producto)
+
+        contador++
+        aplicarNumeroCarrito(contador)
 
         if (storageCarrito.find(product => product.id == producto.id)) {
           let indiceCarrito = storageCarrito.findIndex((product => product.id == producto.id))
           if (storageCarrito[indiceCarrito].cantidad < producto.stock) {
-            storageCarrito[indiceCarrito].cantidad++ // 1. replicar esto en la pintada del Dom de mi carrito para declarar la cantidad
+            storageCarrito[indiceCarrito].cantidad++
             localStorage.setItem('carrito', JSON.stringify(storageCarrito))
 
-            Swal.fire(
-              '¡Listo!',
-              '¡Tu producto fue agregado al carrtio con exito! ',
-              'success',
-            )
-
+            Toastify({
+              text: "¡Listo! Tu producto fue agregado al carrito",
+              duration: 3000,
+              position: "center",
+              style: {
+                background: "linear-gradient(to right, #00b09b, #96c93d)",
+              },
+            }).showToast();
 
           } else if ((storageCarrito[indiceCarrito].cantidad = producto.stock)) {
             Swal.fire(
@@ -119,47 +174,22 @@ fetch('./json/productos.json')
             img: producto.imagen,
             precio: producto.precio,
             stock: producto.stock
-          } 
+          }
 
           storageCarrito.push(crearProducto)
           localStorage.setItem('carrito', JSON.stringify(storageCarrito))
-          Swal.fire(
-            '¡Listo!',
-            '¡Tu producto fue agregado al carrtio con exito! ',
-            'success',
-          )
+          Toastify({
+            text: "¡Listo! Tu producto fue agregado al carrito",
+            duration: 3000,
+            position: "center",
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+          }).showToast();
         }
       })
     })
   })
-
-  // Pintada de Dom para para mi carrito al actualizarse la pagina
-
-const pintarCarrito = document.getElementById("pintarCarrito")
-
-if (localStorage.getItem('carrito')) { 
-
-  ultimasComprasStorage = JSON.parse(localStorage.getItem('carrito'))
-
-  aplicarNumeroCarrito(ultimasComprasStorage.length)
-
-  ultimasComprasStorage.forEach((compra) => {
-
-    pintarCarrito.innerHTML += `
-        <div class="card border-primary mb-3" " style="max-width: 20rem;">
-          <div class="card-header"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">${compra.nombre}</font></font></div>
-          <div class="card-body">
-            <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Cantidad: ${compra.cantidad}</font></font></p>
-            <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Talle: ${compra.talle}</font></font></p>
-            <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Stock: ${compra.stock}</font></font></p>
-            <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Precio: $${compra.precio}</font></font></p>
-          </div>
-        </div>  
-          `
-  })
-}
-
-const numCarrito = document.getElementById('cantidadCarrito')
 
 function limpiarHTML() {
   pintarCarrito.innerHTML = ''
@@ -169,15 +199,43 @@ function limpiarHTML() {
 const limpiarCarrito = document.getElementById('limpiarCarrito')
 
 limpiarCarrito.addEventListener('click', () => {
-  ultimasComprasStorage = [] 
+  localStorage.clear()
+  storageCarrito = []
+  arrayCarritoStorage = []
+  ultimasComprasStorage = []
+  contador = 0
   limpiarHTML()
+
+  Toastify({
+    text: "Tu carrito de compras fue vaciado con exito ",
+    duration: 3000,
+    position: "center",
+    style: {
+      background: "linear-gradient(to top, #200122, #6f0000)",
+    },
+  }).showToast();
 })
 
+let contadorPrecio = 0
 
-// 1. Declarar en mi array de compras (no de mi localStorage) la variable cantidad 
+const finalizarCompra = document.getElementById('finalizarCompra')
 
-// 2. Al borrar el contenido de mi carrito que se borre el LocalStorage
+finalizarCompra.addEventListener('click', () => {
+  let arrayCarritoStorage = JSON.parse(localStorage.getItem('carrito'))
+  arrayCarritoStorage.forEach((compra) => {
+    contadorPrecio += compra.precio * compra.cantidad
+  })
 
-// 3. Que no se creen nuevas cards en el dom con mi array de compras (no de mi localStorage)
+  localStorage.clear()
+  storageCarrito = []
+  arrayCarritoStorage = []
+  ultimasComprasStorage = []
+  contador = 0
+  limpiarHTML()
 
-// 4. actualizar en mi array de compras (no de mi localStorage) el numerito que indica cuantos productos tengo en mi carrito
+  Swal.fire(
+    '¡Compra realizada!',
+    `Tu total a pagar: $${contadorPrecio}`,
+    'success',
+  )
+})
